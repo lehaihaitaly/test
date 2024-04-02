@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20240402 15:50:02.221" generator="Robot 3.2.2 (Python 2.7.17 on linux2)">
+<suite source="/home/ha/PycharmProjects/linagora/testcases/loginTestcases.robot" id="s1" name="loginTestcases">
+<test id="s1-t1" name="login unsucessfully with incorrect email and password">
+<kw name="user is on login page" library="loginPageKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20240402 15:50:02.462" level="INFO">Opening browser 'chrome' to base url 'https://sso.linagora.com/'.</msg>
+<status status="PASS" endtime="20240402 15:50:08.520" starttime="20240402 15:50:02.462"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20240402 15:50:08.645" starttime="20240402 15:50:08.520"></status>
+</kw>
+<status status="PASS" endtime="20240402 15:50:08.645" starttime="20240402 15:50:02.461"></status>
+</kw>
+<kw name="enter &quot;test@abc.com&quot; in the email field and &quot;1234567&quot; in the password field" library="loginPageKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${loginEmail}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20240402 15:50:08.648" level="INFO">Typing text 'test@abc.com' into text field 'id=userfield'.</msg>
+<status status="PASS" endtime="20240402 15:50:08.887" starttime="20240402 15:50:08.647"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20240402 15:50:08.887" level="INFO">Typing text '1234567' into text field 'id=passwordfield'.</msg>
+<status status="PASS" endtime="20240402 15:50:09.003" starttime="20240402 15:50:08.887"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20240402 15:50:09.003" level="INFO">Clicking element 'id=sign_in_button'.</msg>
+<status status="PASS" endtime="20240402 15:50:10.206" starttime="20240402 15:50:09.003"></status>
+</kw>
+<status status="PASS" endtime="20240402 15:50:10.206" starttime="20240402 15:50:08.646"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Wrong credentials</arg>
+</arguments>
+<status status="PASS" endtime="20240402 15:50:10.249" starttime="20240402 15:50:10.207"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20240402 15:50:10.319" starttime="20240402 15:50:10.249"></status>
+</kw>
+<status status="PASS" endtime="20240402 15:50:10.319" critical="yes" starttime="20240402 15:50:02.460"></status>
+</test>
+<status status="PASS" endtime="20240402 15:50:10.321" starttime="20240402 15:50:02.223"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="loginTestcases" pass="1">loginTestcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
